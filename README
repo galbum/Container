@@ -1,0 +1,43 @@
+omri.wolf1, galbum
+Omri Wolf (204867881), Gabi Album (316563949)
+EX: 5
+
+FILES:
+README -- YOU ARE HERE!
+Container.cpp -- The source code for the Container.
+Container.h -- Header file for Container.cpp
+Socket.cpp -- The source code for the Socket.
+Socket.h -- Header file for Socket.cpp.
+Makefile -- makefile to compile container.o and sockets.o with the cmd "make".
+
+
+REMARKS:
+
+ANSWERS:
+Question 1: 
+The general use of Linux pid namespaces is to allow containers to provide functionality such as resuming/suspending the 
+set of processes in the container and migrating the container to a new host while the processes maintainthe same PIDs.
+
+Question 2:
+Creating a separate mount namespace allows all of the proccesses to have a completely seperate view of the mountpoint structure 
+from the original one. This allows having a different root for each process, as well as other mountpoints that are specific to those proccesses.
+
+Question 3:
+The general use of Linux Cgroups is to define what the container can do, for example limiting the maximul number of proccesses to 100.
+
+Question 4:
+Fork() is the original system call for UNIX, you can only create proccesses with fork.
+Clone() is the "newer version" of system calls which can create proccesses but also can create threads.
+
+Question 5:
+If we would like to change the root directory in Linux then we use the Chroot command.
+As said in class everything is Linux is a file, and it also has a root directory.
+This command changes the root directory for currently running proccesses and also changes 
+the root directory of it's childs proccesses. 
+
+Question 6:
+The procfs is a special file system that presents information about proccesses, 
+which provides and more convenient method for accessing process data which is inside the kernel memory.
+We can also think of it as a way of communication between user space and kernel space.
+An example of use is the GNU version of the process reporting utility ps uses the proc file system to obtain its data,
+ without using any specialized system calls.
